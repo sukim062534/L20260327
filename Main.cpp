@@ -11,13 +11,14 @@ using namespace std;
 
 int main()
 {	
-	UEngine* MyEnging = new UEngine;
 
-	MyEnging->GetWorld()->Load("level01.umap");
+	AEngin->GetWorld()->Load("level01.umap");
 	
-	MyEnging->Run();
+	AEngin->Run();
 
-	delete MyEnging;
+	AEngin->Term();
+
+	delete AEngin;
 
 	return 0;
 }

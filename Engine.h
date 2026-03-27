@@ -48,3 +48,4 @@ protected:
 
 };
 
+#define AEngin  UEngine::GetInstance()
