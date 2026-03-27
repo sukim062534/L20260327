@@ -3,6 +3,10 @@
 #include "Actor.h"
 #include "World.h"
 
+UEngine* UEngine::Instance = nullptr;
+
+int UEngine::KeyCode = 0;
+
 UEngine::UEngine()
 {
 	Init();
@@ -31,7 +35,7 @@ void UEngine::Run()
 {
 	while (bIsRunning)
 	{
-		//Input();
+		Input();
 		Tick();
 		Render();
 	}
@@ -40,7 +44,7 @@ void UEngine::Run()
 
 void UEngine::Input()
 {
-	int KeyCode = _getch();
+	KeyCode = _getch();
 }
 
 void UEngine::Tick()
